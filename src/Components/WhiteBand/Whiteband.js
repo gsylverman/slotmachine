@@ -1,12 +1,12 @@
 import React from "react";
-import classes from "./Whiteband.module.css";
+
 
 
 const Whiteband = (props) => {
 
     
     return (
-        <div classes={classes.Whiteband}>
+        <div className={props.classes}>
                 asas
         </div>
     );

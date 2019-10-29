@@ -1,5 +1,27 @@
-.Whiteband{
-    width: 100px;
-    height: 100px;
-    background: red;
+.Whiteband1{
+    width: 31%;
+    height: 100%;
+    background: #ffffff;
+    float: left;
+    margin-left: 0%;
+    
+}
+.Whiteband2{
+    width: 31%;
+    height: 100%;
+    background: #ffffff;
+    float: left;
+    margin-left: 4%;
+    
+}
+
+.Whiteband3{
+    width: 30.01%;
+    height: 100%;
+    background: #ffffff;
+    float: right;
+    margin-left:4%;
+    border: 1px solid white;
+
+    
 }

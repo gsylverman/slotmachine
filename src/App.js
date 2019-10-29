@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import SlotMachine from './Containers/Slotmachine/Slotmachine';
+import MainContainer from "./Containers/MainContainer/MainContainer";
 
 
 class App extends Component {
@@ -7,7 +7,7 @@ class App extends Component {
     render() {
         return (
             <div className="container">
-                <SlotMachine />
+                <MainContainer />
             </div>
         );
     }
