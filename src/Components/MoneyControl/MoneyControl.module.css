@@ -1,0 +1,56 @@
+ .MoneyControl{
+    position: absolute;
+    top: -120px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 70px;
+    background: #ffffff;
+    
+    
+}
+
+
+.triangleLeft {
+    position: absolute;
+    left: -49px;
+    width: 0;
+    height: 0;
+    border-top: 35px solid transparent;
+    border-right: 50px solid #ffffff;
+    border-bottom: 35px solid transparent;
+    
+  }
+
+  .triangleRight{
+      position: absolute;
+    right: -49px;
+    width: 0;
+    height: 0;
+    border-top: 35px solid transparent;
+    border-left: 50px solid #ffffff;
+    border-bottom: 35px solid transparent;
+
+  } 
+  .circle{
+    position:absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border:6px solid  #ffdb0c;
+    background:#fbbf00 ;
+    top:50%;
+    transform: translateY(-50%);
+  }
+
+  .amount{
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    font-size: 2em;
+    transform: translate(-50%, -50%);
+    color:#094a60;
+    font-weight: bold;
+
+  }
+

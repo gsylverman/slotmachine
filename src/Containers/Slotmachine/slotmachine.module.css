@@ -1,0 +1,34 @@
+.Slotmachine {
+    width: 100%;
+   margin:  auto;
+   position: relative;
+   top: 50%;
+   transform: translateY(-50%);
+    background: #511853;
+    border-radius: 30px;
+    border: 12px solid #35D7F4;
+      
+}
+
+@media (min-width:100px) and (min-height:400px) {
+    .Slotmachine{
+        width: 300px;
+        height: 200px;
+    }
+}
+
+@media (min-width:500px) and (min-height:401px) {
+    .Slotmachine{
+      
+        width: 450px;
+        height: 300px;
+    }
+}
+
+@media (min-width:1000px) and (min-height:700px) {
+    .Slotmachine{
+     
+        width: 700px;
+        height: 500px;
+    }
+}
