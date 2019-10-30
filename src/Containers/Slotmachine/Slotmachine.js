@@ -7,14 +7,16 @@ import classesWhite from "../../Components/WhiteBand/WhiteBand.module.css";
 class Slotmachine extends Component {
 
     render() {
+
+       
+
         return (
             <div className={classes.Slotmachine}>
-              
-                <Whiteband classes={classesWhite.Whiteband1}/>
-                <Whiteband classes={classesWhite.Whiteband2} />
-                <Whiteband classes={classesWhite.Whiteband3} />
+               
 
-
+                <Whiteband coloana={1} actiune={this.props.porneste} classes={`${classesWhite.Whiteband} ${classesWhite.Whiteband1}`} />
+                <Whiteband coloana={2}actiune={this.props.porneste} classes={`${classesWhite.Whiteband} ${classesWhite.Whiteband2}`} />
+                <Whiteband coloana={3} actiune={this.props.porneste} classes={`${classesWhite.Whiteband} ${classesWhite.Whiteband3}`} />
 
 
 

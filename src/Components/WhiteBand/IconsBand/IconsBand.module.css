@@ -1,0 +1,89 @@
+.Iconband{
+    width: 100%;
+    background: silver;
+    font-size: 2em;
+    height: 2500px;
+    text-align: center;
+   
+    transform: translate(0px,-300px);
+    pointer-events: none;
+    visibility: hidden; 
+    
+}
+
+.speed1{
+    transition: transform 1300ms ease-out;
+}
+.speed2{
+    transition: transform 1800ms ease-out;
+}
+
+.speed3{
+    transition: transform 2500ms ease-out;
+}
+
+/* 
+Elementele
+ */
+.p{
+  
+    display:flex;
+    flex-direction:column;
+    float: left;
+    text-align: center;
+    width: 100%;
+    height: 80px;
+    background:lightblue;
+    margin-top: 5%;
+    visibility: visible;
+}
+
+
+
+
+
+@media (min-width:200px) and (min-height:400px) {
+    .p{
+    
+        height: 60px;
+    }
+}
+
+@media (min-width:500px) and (min-height:401px) {
+    .p{
+      
+      
+        height: 85px;
+    }
+}
+
+@media (min-width:1000px) and (min-height:700px) {
+    .p{
+     
+     
+        height: 120px;
+    }
+}
+
+
+
+
+
+
+.Ruleaza1{
+    transform: translate(0px,-1820px);
+   
+    
+}
+
+.Ruleaza2{
+    transform: translate(0px,-1820px);
+   
+    
+}
+
+.Ruleaza3{
+    transform: translate(0px,-1820px);
+   
+    
+}
