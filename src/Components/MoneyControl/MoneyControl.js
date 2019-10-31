@@ -23,10 +23,11 @@ const MoneyControl = (props) => {
             <div className={classes.circle}>
                 <i style={bitCoinStyle} className="fab fa-btc"></i>
             </div>
-            <span className={classes.amount}> 100 </span>
+            <span className={classes.amount}> {props.amount} </span>
 
             <div className={classes.triangleRight}></div>
             <div className={classes.hex}></div>
+            
 
         </div>
 

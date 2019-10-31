@@ -1,10 +1,10 @@
 import React from "react";
 import classes from "./IconsBand.module.css";
+import Icon from "./Icon/Icon";
+
 
 
 const IconsBand = (props) => {
-
-    
 
     const colanaSt = () => {
         if (props.coloana === 1) {
@@ -13,8 +13,7 @@ const IconsBand = (props) => {
             return classes.Ruleaza2;
         } else if (props.coloana === 3) {
             return classes.Ruleaza3;
-        }
-        
+        }        
     }
 
     const vitezaColoana = () => {
@@ -25,11 +24,7 @@ const IconsBand = (props) => {
         } else if (props.coloana === 3) {
             return classes.speed3;
         }
-
     }
-
-
-
 
     let clase = [
         props.actiune ? colanaSt() : "",
@@ -40,44 +35,30 @@ const IconsBand = (props) => {
 
     clase = clase.join(" ");
 
+      const compuneListaDeIcoane=()=>{
+        
+          return props.lista.map(element => {
+              return (<Icon
+                 key={Math.random()}
+                 imgNumber={element}
+                 />)
+          });
+      }
+      
+      
 
-
-
+        
     return (
+        
+        
         <div className={props.static ? classes.IconsBand : clase}>
 
-            <div className={classes.p}> 1</div>
-            <div className={classes.p}> 2</div>
-            <div className={classes.p}> 3</div>
-            <div className={classes.p}> 4</div>
-            <div className={classes.p}> 5</div>
-            <div className={classes.p}> 6</div>
-            <div className={classes.p}> 7</div>
-            <div className={classes.p}> 8</div>
-            <div className={classes.p}> 9</div>
-            <div className={classes.p}> 10</div>
-            <div className={classes.p}> 11</div>
-            <div className={classes.p}> 12</div>
-            <div className={classes.p}> 13</div>
-            <div className={classes.p}> 14</div>
-            <div className={classes.p}> 15</div>
-            <div className={classes.p}> 16</div>
-            <div className={classes.p}> 1</div>
-            <div className={classes.p}> 2</div>
-            <div className={classes.p}> 3</div>
-            <div className={classes.p}> 4</div>
-            <div className={classes.p}> 5</div>
-            <div className={classes.p}> 6</div>
-            <div className={classes.p}> 7</div>
-            <div className={classes.p}> 8</div>
-            <div className={classes.p}> 9</div>
-            <div className={classes.p}> 10</div>
-            <div className={classes.p}> 11</div>
-            <div className={classes.p}> 12</div>
-            <div className={classes.p}> 13</div>
-            <div className={classes.p}> 14</div>
-            <div className={classes.p}> 15</div>
-            <div className={classes.p}> 16</div>
+           
+           {compuneListaDeIcoane()}
+           
+
+        
+         
 
         </div>
     );

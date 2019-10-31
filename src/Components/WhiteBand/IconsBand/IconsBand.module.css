@@ -2,7 +2,7 @@
     width: 100%;
     background: silver;
     font-size: 2em;
-    height: 2500px;
+    height: 1700px;
     text-align: center;
    
     transform: translate(0px,-300px);
@@ -25,24 +25,13 @@
 /* 
 Elementele
  */
-.p{
-  
-    display:flex;
-    flex-direction:column;
-    float: left;
-    text-align: center;
-    width: 100%;
-    height: 80px;
-    background:lightblue;
-    margin-top: 5%;
-    visibility: visible;
-}
 
 
 
 
 
-@media (min-width:200px) and (min-height:400px) {
+
+/* @media (min-width:200px) and (min-height:400px) {
     .p{
     
         height: 60px;
@@ -63,27 +52,25 @@ Elementele
      
         height: 120px;
     }
-}
-
-
-
-
-
-
+ 
+} */
 .Ruleaza1{
-    transform: translate(0px,-1820px);
-   
-    
+    transform: translate(0px,-100%);
+      
 }
 
 .Ruleaza2{
-    transform: translate(0px,-1820px);
-   
-    
+    transform: translate(0px,-100%);
+     
 }
 
 .Ruleaza3{
-    transform: translate(0px,-1820px);
-   
-    
+    transform: translate(0px,-100%);
+      
 }
+
+
+
+
+
+
