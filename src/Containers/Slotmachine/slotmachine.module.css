@@ -1,5 +1,5 @@
 .Slotmachine {
-    width: 100%;
+   
    margin:  auto;
    position: relative;
    top: 50%;
@@ -9,9 +9,8 @@
     border: 10px solid #35D7F4;
     overflow: hidden;
     height: 400px;
-    max-width: 450px;
     max-height: 45%;
-    
+    max-width: 80%;
 
      
 }
@@ -20,7 +19,8 @@
 /* // Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { 
     .Slotmachine{
-     
+        width: 400px;
+        height: 300px;
     }
 
  }
@@ -28,7 +28,8 @@
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
     .Slotmachine{
-    
+        width: 450px;
+        height: 350px;
     }
 
  }
@@ -36,13 +37,13 @@
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
     .Slotmachine{
-   
+        width: 500px;
     }
  }
 
 /* // Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { 
     .Slotmachine{
-  
+        width: 500px;
     }
  }
