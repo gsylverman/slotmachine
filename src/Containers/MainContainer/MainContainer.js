@@ -9,8 +9,9 @@ class MainContainer extends Component {
     state = {
         pornesteAnimatie: false,
         items: [],
-        amount: 100
-
+        amount: 100,
+        rezultate: { l1: [], l2: [], l3: [] },
+        started:false
     }
 
     componentDidMount() {
@@ -40,7 +41,30 @@ class MainContainer extends Component {
         newState.pornesteAnimatie = true;
         newState.amount = newState.amount - 10;
 
+
+        console.log("Rezultate:")
+        const lista = [...newState.items];
+
+        const linia1 = [...lista].slice(0, 20).slice(17,20);
+        const linia2 = [...lista].slice(20, 40).slice(17,20);
+        const linia3 = [...lista].slice(40, 60).slice(17,20);
+
+      
+        newState.rezultate.l1 = linia1;
+        newState.rezultate.l2 = linia2;
+        newState.rezultate.l3 = linia3;
+
+
+        console.log([...lista].slice(0, 20));
+        console.log(linia1);
+        console.log([...lista].slice(20, 40));
+        console.log(linia2);
+        console.log([...lista].slice(40, 60));
+        console.log(linia3);
+        newState.started=true;
+
         this.setState(newState);
+
 
         setTimeout(() => this.setState({ pornesteAnimatie: false }), 3000)
     }
@@ -55,37 +79,17 @@ class MainContainer extends Component {
         const lista2 = [...lista].slice(20, 40);
         const lista3 = [...lista].slice(40, 60);
         const liste = { lista1, lista2, lista3 };
-        //rezultate
-        console.log("Rezultate:")
-        const linia1rez1=lista1[lista1.length-3];
-        const linia2rez1=lista2[lista2.length-3];
-        const linia3rez1=lista3[lista3.length-3];
-       const linia1=[linia1rez1,linia2rez1,linia3rez1];
-       console.log(linia1);
 
 
-        const linia1rez2=lista1[lista1.length-2];
-        const linia2rez2=lista2[lista2.length-2];
-        const linia3rez2=lista3[lista3.length-2];
-
-        const linia2=[linia1rez2,linia2rez2,linia3rez2];
-       console.log(linia2);
-
-        const linia1rez3=lista1[lista1.length-1];
-        const linia2rez3=lista2[lista2.length-1];
-        const linia3rez3=lista3[lista3.length-1];
-
-        const linia3=[linia1rez3,linia2rez3,linia3rez3];
-        console.log(linia3);
 
 
 
         const style = {
             position: "absolute",
-            bottom:"20%",
+            bottom: "20%",
             left: "50%",
             transform: "translateX(-50%)",
-            background: this.state.pornesteAnimatie ||this.state.amount<10 ? "red" : "green",
+            background: this.state.pornesteAnimatie || this.state.amount < 10 ? "red" : "green",
             padding: "10px",
             cursor: "grab"
 
@@ -93,9 +97,9 @@ class MainContainer extends Component {
         return (
             <div className={classes.MainContainer} >
                 <MoneyControl amount={this.state.amount} />
-                <Slotmachine liste={liste} porneste={this.state.pornesteAnimatie} />
+                <Slotmachine started={this.state.started} rez={this.state.rezultate} liste={liste} porneste={this.state.pornesteAnimatie} />
                 <div style={style}>
-                    <button disabled={this.state.pornesteAnimatie || this.state.amount<10} onClick={this.start} >START</button>
+                    <button disabled={this.state.pornesteAnimatie || this.state.amount < 10} onClick={this.start} >START</button>
                 </div>
 
 
