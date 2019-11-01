@@ -47,32 +47,36 @@ class MainContainer extends Component {
 
 
 
-    castig = (r1,r2,r3) => {
-        let win=0;
-     const linia1=[r1[0],r2[0],r3[0]];
-     const linia2=[r1[1],r2[1],r2[1]];
-     const linia3=[r1[2],r2[2],r3[2]];
+    castig = (r1, r2, r3) => {
+        let win = 0;
 
-        for(let i=0;i<linia1.length;i++){
+        const linia1 = [r1[0], r2[0], r3[0]];
+        const linia2 = [r1[1], r2[1], r3[1]];
+        const linia3 = [r1[2], r2[2], r3[2]];
 
-            if( linia1[i]===linia2[i]=== linia3[i]){
-                win+=1000;
+
+        for (let i = 0; i < r1.length; i++) {
+
+            if (r1[i] === r2[i] && r2[i] === r3[i]) {
+                win += 500;
                 console.log("BRAVO");
                 console.log("3 la fel");
-            }
-            if(linia1[i]===linia2[i] ||  linia2[i]===linia3[i] ){
-                win+=50;
-                console.log("2 la fel");
-            }
+            } else if (r1[i] === r2[i] || r2[i] === r3[i]) {
 
+                win += 10;
+                console.log("2 la fel");
+
+            }
         }
+        if (win > 0) {
+            const oldAmount = this.state.amount;
+            let newAmount = oldAmount + win;
+            this.setState({ amount: newAmount });
+        }
+
         console.log(linia1);
         console.log(linia2);
         console.log(linia3);
-
-        console.log(win);
-        
-
     }
 
     start = (e) => {
@@ -86,7 +90,7 @@ class MainContainer extends Component {
         const linia1 = [...lista].slice(0, 20).slice(17, 20);
         const linia2 = [...lista].slice(20, 40).slice(17, 20);
         const linia3 = [...lista].slice(40, 60).slice(17, 20);
-        
+
 
 
         newState.rezultate.l1 = linia1;
@@ -95,10 +99,9 @@ class MainContainer extends Component {
         newState.started = true;
         this.setState(newState);
 
-            this.castig(linia1,linia2,linia3);
+        setTimeout(() => { this.castig(linia1, linia2, linia3) }, 2500);
 
-
-        setTimeout(() => this.setState({ pornesteAnimatie: false }), 3000)
+        setTimeout(() => this.setState({ pornesteAnimatie: false }), 3000);
     }
 
 
@@ -112,7 +115,7 @@ class MainContainer extends Component {
         const lista3 = [...lista].slice(40, 60);
         const liste = { lista1, lista2, lista3 };
 
-    console.log(lista2)
+
 
 
 

@@ -8,8 +8,7 @@ class Slotmachine extends Component {
 
     render() {
         const { lista1, lista2, lista3 } = this.props.liste;
-        const {l1,l2,l3}    =this.props.rez;
-     
+        const { l1, l2, l3 } = this.props.rez;
 
 
 
