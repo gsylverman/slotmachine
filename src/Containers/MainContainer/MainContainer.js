@@ -82,7 +82,7 @@ class MainContainer extends Component {
 
         const style = {
             position: "absolute",
-            
+            bottom:"20%",
             left: "50%",
             transform: "translateX(-50%)",
             background: this.state.pornesteAnimatie ||this.state.amount<10 ? "red" : "green",

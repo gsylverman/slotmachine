@@ -4,8 +4,7 @@
     font-size: 2em;
     height: 1700px;
     text-align: center;
-   
-    transform: translate(0px,-300px);
+    transform: translate(0px,-400px);
     pointer-events: none;
     visibility: hidden; 
     

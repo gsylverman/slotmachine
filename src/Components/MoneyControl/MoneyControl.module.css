@@ -1,15 +1,46 @@
  .MoneyControl{
     position: absolute;
-    top: -120px;
+    top:15%;
     left: 50%;
     transform: translateX(-50%);
-    width: 60%;
+    width:250px;
     height: 70px;
     background: #ffffff;
     border-radius: 18px;
     border: 6px solid #B0d2da;
     pointer-events: none;
     
+}
+
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+  .MoneyControl{
+    width:250px;
+  }
+
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+  .MoneyControl{
+    width:280px;
+  }
+
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+  .MoneyControl{
+    width:400px;
+  }
+}
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+  .MoneyControl{
+    width:400px;
+  }
 }
 
 

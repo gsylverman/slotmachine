@@ -3,8 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+
 .container {
-/* background-color:#230e29; */
 background: rgb(36,15,41);
 background: radial-gradient(circle, rgba(36,15,41,1) 0%, rgba(76,28,82,1) 0%, rgba(36,15,41,1) 60%) no-repeat;
 background-position: center;
@@ -14,6 +15,7 @@ position: fixed;
 height: 100%;
 width: 100%;
 cursor: grab;
+border: 5px solid yellow;
 }
 
 
