@@ -8,7 +8,7 @@
     background: #ffffff;
     border-radius: 18px;
     border: 6px solid #B0d2da;
-    pointer-events: none;
+  
     
 }
 
@@ -75,7 +75,7 @@
     border-radius: 18px; 
     border-right: 6px solid #B0d2da;
     border-top:  6px solid #B0d2da;
-    pointer-events: none;
+  
     
   
 
@@ -96,12 +96,14 @@
   .amount{
     position: absolute;
     top: 50%;
-    left: 45%;
+    left: 50%;
     font-size: 2em;
     transform: translate(-50%, -50%);
     color:#094a60;
     font-weight: bold;
-    pointer-events: none;
+ 
+    width: 50%;
+    border:none;
 
   }
 

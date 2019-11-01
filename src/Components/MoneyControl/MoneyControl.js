@@ -12,6 +12,8 @@ const MoneyControl = (props) => {
         color: "#e47700"
     };
 
+ 
+
 
     return (
 
@@ -23,11 +25,12 @@ const MoneyControl = (props) => {
             <div className={classes.circle}>
                 <i style={bitCoinStyle} className="fab fa-btc"></i>
             </div>
-            <span className={classes.amount}> {props.amount} </span>
+          
+            <input placeholder="Enter Amount" className={classes.amount} disabled={props.started} type="text" onChange={(e)=>props.changeAmount(e.target.value)} value={props.amount}></input>
 
             <div className={classes.triangleRight}></div>
             <div className={classes.hex}></div>
-            
+
 
         </div>
 
