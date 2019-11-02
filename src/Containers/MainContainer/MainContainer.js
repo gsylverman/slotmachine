@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import MoneyControl from "../../Components/MoneyControl/MoneyControl";
 import classes from "./MainContainer.module.css";
 import Slotmachine from "../Slotmachine/Slotmachine";
+import Spin from "../../Components/Spin/Spin";
 
 
 
@@ -58,12 +59,12 @@ class MainContainer extends Component {
         for (let i = 0; i < r1.length; i++) {
 
             if (r1[i] === r2[i] && r2[i] === r3[i]) {
-                win += 500;
+                win += 100;
                 console.log("BRAVO");
                 console.log("3 la fel");
             } else if (r1[i] === r2[i] || r2[i] === r3[i]) {
 
-                win += 10;
+                win += 5;
                 console.log("2 la fel");
 
             }
@@ -99,9 +100,15 @@ class MainContainer extends Component {
         newState.started = true;
         this.setState(newState);
 
+
+
+
+
+
         setTimeout(() => { this.castig(linia1, linia2, linia3) }, 2500);
 
         setTimeout(() => this.setState({ pornesteAnimatie: false }), 3000);
+
     }
 
 
@@ -115,31 +122,12 @@ class MainContainer extends Component {
         const lista3 = [...lista].slice(40, 60);
         const liste = { lista1, lista2, lista3 };
 
-
-
-
-
-
-
-        const style = {
-            position: "absolute",
-            bottom: "20%",
-            left: "50%",
-            transform: "translateX(-50%)",
-            background: this.state.pornesteAnimatie || this.state.amount < 10 ? "red" : "green",
-            padding: "10px",
-            cursor: "grab"
-
-        }
         return (
             <div className={classes.MainContainer} >
                 <MoneyControl started={this.state.started} changeAmount={this.changeAmount} amount={this.state.amount} />
                 <Slotmachine started={this.state.started} rez={this.state.rezultate} liste={liste} porneste={this.state.pornesteAnimatie} />
-                <div style={style}>
-                    <button disabled={this.state.pornesteAnimatie || this.state.amount < 10} onClick={this.start} >START</button>
-                </div>
 
-
+                <Spin disabled={this.state.pornesteAnimatie || this.state.amount < 10} spin={this.start} />
 
             </div>
 

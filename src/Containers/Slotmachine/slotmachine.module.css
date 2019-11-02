@@ -38,6 +38,7 @@
 @media (min-width: 992px) { 
     .Slotmachine{
         width: 500px;
+        height: 450px;
     }
  }
 
@@ -45,5 +46,6 @@
 @media (min-width: 1200px) { 
     .Slotmachine{
         width: 500px;
+        height: 450px;
     }
  }

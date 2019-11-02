@@ -11,9 +11,14 @@ const MoneyControl = (props) => {
         transform: "translate(-50%, -50%)",
         color: "#e47700"
     };
+    let startClasses = [
+        classes.Start,
+        props.amount > 0 ? "" : classes.disabled
+    ];
+    startClasses = startClasses.join(" ");
 
- 
-
+    //reprorneste jocul
+    let disabled = props.started && props.amount < 10 ? false : props.started;
 
     return (
 
@@ -25,11 +30,17 @@ const MoneyControl = (props) => {
             <div className={classes.circle}>
                 <i style={bitCoinStyle} className="fab fa-btc"></i>
             </div>
-          
-            <input placeholder="Enter Amount" className={classes.amount} disabled={props.started} type="text" onChange={(e)=>props.changeAmount(e.target.value)} value={props.amount}></input>
+
+
+
+            <input placeholder="Enter Amount" className={classes.amount} disabled={disabled} type="number" onChange={(e) => props.changeAmount(e.target.value)} value={props.amount}></input>
 
             <div className={classes.triangleRight}></div>
             <div className={classes.hex}></div>
+
+            <div className={startClasses}>
+                Start
+                </div>
 
 
         </div>

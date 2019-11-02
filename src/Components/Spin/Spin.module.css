@@ -1,0 +1,50 @@
+
+   .Spin{
+    position: relative;
+    top: calc(50% + 190px);
+    transform: translateY(-50%);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #FF00B8;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    cursor: grab;
+    color:white;  
+    text-align:center;
+    width: 150px; 
+    font-size: 2rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    letter-spacing: 5px;
+    border-radius: 15px;
+    border: 3px solid #00E0FF;
+    
+
+
+}
+.Spin:hover{
+    background:   #8e0067 ;
+    border: 3px solid #9f44a7;
+
+} 
+.Spin:focus{
+    background:   #FF00b8 ;
+
+} 
+.disabled {
+    background:  #827f81;
+    border: 3px solid #dbdbdb;
+}
+
+.flicareste{
+    animation: colorchange 1s;
+}
+
+@keyframes colorchange
+{
+  0%   {background: red;}
+  25%  {background: yellow;}
+  50%  {background: blue;}
+  75%  {background: green;}
+  100% {background: red;}
+}
