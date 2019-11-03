@@ -1,22 +1,33 @@
  .MoneyControl{
     position: absolute;
-    top:15%;
+    top: calc(50% - 300px);
     left: 50%;
     transform: translateX(-50%);
     width:250px;
     height: 60px;
     background: #ffffff;
     border-radius: 18px;
-    
+ 
   
     
 }
+
+/* // Small devices (landscape phones, 250px and up) */
+@media (min-width: 250px) { 
+  .MoneyControl{
+    width:250px;
+    top: calc(50% - 220px);
+  }
+
+}
+
 
 
 /* // Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { 
   .MoneyControl{
     width:250px;
+    top: calc(50% - 300px);
   }
 
 }
