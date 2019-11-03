@@ -1,5 +1,4 @@
-
-   .Spin{
+.Spin{
     position: relative;
     top: calc(50% + 190px);
     transform: translateY(-50%);
@@ -18,19 +17,27 @@
     letter-spacing: 5px;
     border-radius: 15px;
     border: 3px solid #00E0FF;
+
+     /* disable text selection */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer */
+ -khtml-user-select: none; /* KHTML browsers (e.g. Konqueror) */
+-webkit-user-select: none; /* Chrome, Safari, and Opera */
+-webkit-touch-callout: none; /* Disable Android and iOS callouts*/
     
-
-
 }
+
 .Spin:hover{
     background:   #8e0067 ;
     border: 3px solid #9f44a7;
 
 } 
+
 .Spin:focus{
     background:   #FF00b8 ;
 
 } 
+
 .disabled {
     background:  #827f81;
     border: 3px solid #dbdbdb;
