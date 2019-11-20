@@ -6,7 +6,6 @@ const Spin = (props) => {
         classes.Spin,
         //flicarire :-)
         props.disabled ? classes.disabled : classes.flicareste
-
     ];
     clase = clase.join(" ");
     const porneste = () => {
@@ -15,11 +14,9 @@ const Spin = (props) => {
         }
     };
 
-
     return (
         <div onClick={porneste} className={clase}>SPIN</div>
     );
 };
-
 
 export default Spin;
